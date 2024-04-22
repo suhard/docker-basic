@@ -1,0 +1,46 @@
+#list the running docker containers
+docker ps    
+#list all the containers seen by the docker daemon
+docker ps –a 
+#list the docker images available locally on the host
+docker images 
+
+#login to your Docker Hub account at your host
+docker login
+#commit an image from a container
+docker commit <container-ID> <new-image-name>
+#create (build) an image from a Dockerfile (the file is in the same directory)  -- do not miss the "." from the end of the command!
+docker build -t <new-image-name> .
+#prepare (tag) an image for upload to Docker Hub
+docker tag <new-image-name> <hub-id>/<repo-name>:<my-tag>
+#upload (push) an image to Docker Hub
+docker push <hub-id>/<repo-name>:<my-tag>
+
+#create a volume in Docker
+docker volume create <my-vol>
+#list the available volumes
+docker volume ls
+#attach volume during container run 
+docker run -v <my-vol>:/absolute/path/in/container  --name <my-container>  <image-name>
+
+#create a network
+docker network create <network>
+#attach a container to that network
+docker network connect <network> <container>
+#disconnect a container to that network
+docker network disconnect <network> <container>
+
+#instantiate an image as a daemon (-d switch) and runs the command in it        
+docker run -d <image>  <command> 
+#start/stop the container        
+docker start/stop  <container> 
+#open a bash shell on a running container        
+docker exec -it <container>  bash 
+#remove (delete) a container        
+docker rm –f <container> 
+#remove (delete) an image
+docker rmi <image>
+#Escape sequence (send a container to background
+<CTRL> p q      
+#bring to foreground a bg container
+docker attach <container>
