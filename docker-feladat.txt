@@ -1,0 +1,10 @@
+1. Hozzatok létre egy Docker registry fiókot (https://hub.docker.com/)
+2. Hozzatok létre egy saját Docker volume-ot és network-ot.
+3. Indítsatok egy webszervert (csatoljátok fel a 2. pontban létrehozott elemeket), úgy hogy a webszerver portja legyen kicsatolva ("publish") a gazdagépre. A volume a webszerver index.html fájlának mappájába legyen csatolva!
+4. Indítsatok egy shell-t (alpine, ubuntu, stb. Docker image-ből), csatoljátok fel a 2. pontban létrehozott elemeket
+5. Hozzatok létre egy munkakönyvtárat a shell-nek indított konténerben, ahol létrehoztok 3 alternatív index.html fájlt.
+6. Ellenőrizzétek, hogy amint változtatjátok az index.html tartalmát erre az alternatív tartalomra, akkor valóban változik-e a webszerver által visszaadott tartalom? (Ellenőrzés úgy a shell konténerből, mint a gazdagépről).
+Megj.: a nginx webszerver esetében az elérési út: /usr/share/nginx/html/index.html
+https://stackoverflow.com/questions/10674867/nginx-default-public-www-location 
+7. Írjátok ki az 5. pont szerint módosított konténer image-t. Töltsétek azt fel saját Docker hub fiókotokba.
+8. Dokumentáljátok  a processz azonosítód (pid), IP címeket, felhasznált Docker elemeket, konténer információt (csak a releváns részeket kell bemásolni a jegyzőkönyvbe!). Megj.: a pid és IP cím értékeket úgy a konténeren belülről, mint a gazdagépről kérem megmutatni.
