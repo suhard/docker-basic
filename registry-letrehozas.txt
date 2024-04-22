@@ -1,0 +1,4 @@
+A nyilvános Docker registry-n létre kell hozni egy fiókot:  https://hub.docker.com/
+DockerHub-on a regisztráció után létre kell hozni egy saját “repository”-t is!
+Az ingyenes regisztrációhoz egy privát (titkos) repo jár, valamint korlátlan számú nyilvános repó (egy korábban privátnak beállított repo-t bármikor publikussá tehetünk és vissza).
+Tulajdonképpen a „account”/“repository” lesz az a név, amire a lokális, feltöltésre kész image-t át kell nevezni. Adott repository-n belül eltérő „tag” (címke) segítségével lehet elérő image-t feltölteni. Alap esetben a tag szerepe az eltérő verziók jelölése. A legutolsó pedig automatikusan megkapja az alapértelmezett „latest” „tag”-et. 
